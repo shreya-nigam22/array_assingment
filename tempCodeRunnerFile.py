@@ -1,11 +1,12 @@
-def moveAllZeroes(arr,n):
-    j = 0
-    for i in range(n):
-        if arr[i] != 0:
-            arr[i],arr[j] = arr[j],arr[i]
-            j += 1
-    return arr
+def profit_multiple(arr,n):
+    profit = 0
+    for i in range(1,n):
+        if arr[i] > arr[i-1]:
+            profit += arr[i] - arr[i-1]
+    return profit  
+
 
 arr = list(map(int,input("enter the numbers : ").split(",")))
-n = len(arr) 
-print(moveAllZeroes(arr,n))
+n = len(arr)
+print(profit_multiple(arr,n))    
+
