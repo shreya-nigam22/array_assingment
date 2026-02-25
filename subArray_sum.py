@@ -1,17 +1,16 @@
 # Find Subarray with Given Sum.
 
 def sub_sum(arr,n,x):
-    prefix_map = {}
-    curr_sum = 0
+    curr = 0
+    s = 0
     for i in range(n):
-        curr_sum += arr[i]
-        if curr_sum == x:
-            return 0, i
-        if (curr_sum - x) in prefix_map:
-            return prefix_map[curr_sum - x] + 1, i
-        prefix_map[curr_sum] = i
+        curr += arr[i]
+        while curr > x:
+            curr -= arr[s]
+            s += 1
+        if curr == x:
+            return "yes"    
     return -1
-
 
 arr = list(map(int,input("enter the numbers : ").split(",")))   
 n = len(arr)
