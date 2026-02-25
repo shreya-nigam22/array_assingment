@@ -9,7 +9,7 @@ def sub_sum(arr,n,x):
             curr -= arr[s]
             s += 1
         if curr == x:
-            return "yes"    
+            return arr[s:i+1]    
     return -1
 
 arr = list(map(int,input("enter the numbers : ").split(",")))   
