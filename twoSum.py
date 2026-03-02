@@ -10,4 +10,7 @@ def twoSum(arr,n,sum):
 arr = list(map(int,input("enter the numbers : ").split(",")))   
 n = len(arr)
 sum = int(input("enter a num : "))
-print(twoSum(arr,n,sum))         
+print(twoSum(arr,n,sum)) 
+
+
+
