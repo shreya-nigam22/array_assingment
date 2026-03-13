@@ -1,8 +1,8 @@
 def chooseDish(arr):
     d = {}
-    for i in d:
+    for i in arr:
         d[i] = 1
-    for i in d:
+    for i in arr:
         d[i] += 1
     max_count = 0
     res = None
@@ -13,5 +13,5 @@ def chooseDish(arr):
             res = c
     return res        
 
-arr = list(map(int,input("enter any numbers : " )))
+arr = list(map(int,input("enter any numbers : " ).split(",")))
 print(chooseDish(arr))
